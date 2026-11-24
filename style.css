@@ -1,1 +1,115 @@
 *{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#222}.header{height:58px;background:#139bce;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;border-bottom:2px solid #777}.layout{display:flex;min-height:calc(100vh - 58px)}.sidebar{width:230px;flex-shrink:0;background:#139bce;padding:12px 0}.sidebar a{display:block;color:white;text-decoration:none;font-size:20px;padding:14px 20px}.sidebar a:hover,.sidebar a.active{background:#087ca9}.main{flex:1;min-width:0}.profile-top{position:relative;min-height:360px;padding:25px 30px;border-bottom:1px solid #777}.picture{width:215px;height:215px;border:2px dashed #999;display:flex;align-items:center;justify-content:center;text-align:center}.edit{position:absolute;right:25px;top:28px;background:#139bce;color:white;padding:12px 20px;text-decoration:none;border:1px solid #777}.description{margin-top:20px;font-size:21px}.interests{padding:15px;font-size:21px}@media(max-width:650px){.layout{display:block}.sidebar{width:100%;display:flex;flex-wrap:wrap}.sidebar a{font-size:15px;padding:10px}.profile-top{padding:20px}.edit{right:15px;top:20px}.picture{width:170px;height:170px}}
+/* Find Friends Page */
+
+.find-friends-main {
+    padding: 30px;
+}
+
+.find-description {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.friend-filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    background: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+
+.friend-filters label {
+    font-weight: bold;
+}
+
+.friend-filters select {
+    display: block;
+    margin-top: 8px;
+    padding: 8px;
+    min-width: 180px;
+}
+
+.friend-grid {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.friend-card {
+    width: 280px;
+    border: 1px solid #999;
+    padding: 20px;
+    background: white;
+}
+
+.friend-picture {
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.friend-card h2 {
+    margin-bottom: 8px;
+}
+
+.friend-card p {
+    line-height: 1.5;
+}
+
+.distance {
+    color: #555;
+}
+
+.friend-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.view-button,
+.request-button {
+    padding: 9px 12px;
+    border: 1px solid #777;
+    cursor: pointer;
+}
+
+.view-button {
+    background: white;
+}
+
+.request-button {
+    background: #139bce;
+    color: white;
+}
+
+.request-sent {
+    background: #777;
+    cursor: default;
+}
+
+@media(max-width:650px) {
+
+    .friend-grid {
+        display: block;
+    }
+
+    .friend-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .friend-filters {
+        display: block;
+    }
+
+    .friend-filters label {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
