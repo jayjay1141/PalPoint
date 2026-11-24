@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>PalPoint - Find Friends</title><link rel="stylesheet" href="style.css"></head>
-<body><header class="header">PALPOINT</header><div class="layout"><nav class="sidebar" aria-label="Main navigation"><a href="index.html">PROFILE</a>
-<a href="find-friends.html" class="active">FIND FRIENDS</a>
-<a href="messages.html">MESSAGE BOARD</a>
-<a href="groups.html">GROUPS</a>
-<a href="clubs.html">CLUBS</a>
-<a href="events.html">EVENTS</a>
-<a href="settings.html">SETTINGS</a></nav><main class="main" style="padding:30px"><h1>Find Friends</h1><p>This page is coming soon.</p></main></div></body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalPoint - Find Friends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    PALPOINT
+</header>
+
+<div class="layout">
+
+    <nav class="sidebar" aria-label="Main navigation">
+        <a href="index.html">PROFILE</a>
+        <a href="find-friends.html" class="active">FIND FRIENDS</a>
+        <a href="messages.html">MESSAGE BOARD</a>
+        <a href="groups.html">GROUPS</a>
+        <a href="clubs.html">CLUBS</a>
+        <a href="events.html">EVENTS</a>
+        <a href="settings.html">SETTINGS</a>
+    </nav>
+
+    <main class="main find-friends-main">
+
+        <h1>Find Friends</h1>
+
+        <p class="find-description">
+            Find students who share your interests and preferences.
+        </p>
+
+        <section class="friend-filters">
+
+            <label>
+                Interest:
+                <select>
+                    <option>All Interests</option>
+                    <option>Technology</option>
+                    <option>Gaming</option>
+                    <option>Fitness</option>
+                    <option>Movies</option>
+                    <option>Study Groups</option>
+                </select>
+            </label>
+
+            <label>
+                University:
+                <select>
+                    <option>All Universities</option>
+                    <option>Kutztown University</option>
+                    <option>Nearby Universities</option>
+                </select>
+            </label>
+
+            <label>
+                Distance:
+                <select>
+                    <option>Any Distance</option>
+                    <option>Same University</option>
+                    <option>Within 10 Miles</option>
+                    <option>Within 25 Miles</option>
+                </select>
+            </label>
+
+        </section>
+
+
+        <section class="friend-grid">
+
+            <div class="friend-card">
+
+                <div class="friend-picture">
+                    Profile Picture
+                </div>
+
+                <h2>Maya Patel</h2>
+
+                <p>
+                    Biology Major<br>
+                    Kutztown University
+                </p>
+
+                <p>
+                    <strong>Shared Interests:</strong><br>
+                    Fitness, Movies, Study Groups
+                </p>
+
+                <p class="distance">
+                    About 6 miles away
+                </p>
+
+                <div class="friend-buttons">
+                    <button class="view-button">
+                        View Profile
+                    </button>
+
+                    <button class="request-button"
+                            onclick="sendRequest(this)">
+                        Send Friend Request
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="friend-card">
+
+                <div class="friend-picture">
+                    Profile Picture
+                </div>
+
+                <h2>Jordan Reed</h2>
+
+                <p>
+                    Computer Science Major<br>
+                    Kutztown University
+                </p>
+
+                <p>
+                    <strong>Shared Interests:</strong><br>
+                    Technology, Gaming, Study Groups
+                </p>
+
+                <p class="distance">
+                    Same university
+                </p>
+
+                <div class="friend-buttons">
+                    <button class="view-button">
+                        View Profile
+                    </button>
+
+                    <button class="request-button"
+                            onclick="sendRequest(this)">
+                        Send Friend Request
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="friend-card">
+
+                <div class="friend-picture">
+                    Profile Picture
+                </div>
+
+                <h2>Emma Miller</h2>
+
+                <p>
+                    Business Administration Major<br>
+                    Nearby University
+                </p>
+
+                <p>
+                    <strong>Shared Interests:</strong><br>
+                    Movies, Fitness, Volunteering
+                </p>
+
+                <p class="distance">
+                    About 11 miles away
+                </p>
+
+                <div class="friend-buttons">
+                    <button class="view-button">
+                        View Profile
+                    </button>
+
+                    <button class="request-button"
+                            onclick="sendRequest(this)">
+                        Send Friend Request
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script>
+
+function sendRequest(button) {
+
+    button.innerText = "Request Sent";
+
+    button.disabled = true;
+
+    button.classList.add("request-sent");
+}
+
+</script>
+
+</body>
+
 </html>
